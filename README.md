@@ -1,2 +1,2 @@
 # Vanilla_JS
-ITI JavaScript e commerce project
+ITI JavaScript e-commerce project
