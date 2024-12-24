@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 20px;
+}
+/* .products{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+} */
+
+.parent {
+display: flex;
+gap: 30px;
+}
+.product-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item{
+        width: 75%;
+}
