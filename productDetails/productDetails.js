@@ -64,6 +64,7 @@ function getProduct() {
 getProduct();
 
 console.log(product.name);
+<<<<<<< HEAD
 
 // let productsRef = ref(db, "products/");
 // get(productsRef)
@@ -79,3 +80,5 @@ console.log(product.name);
 //   .catch((error) => {
 //     console.error("Error fetching products:", error);
 //   });
+=======
+>>>>>>> 86e845175900de5e1e404423cf08bae3c666d8c5
