@@ -1,0 +1,25 @@
+/* Start Css */
+
+
+.search-layout {
+  /* height: 300px; */
+  background-color: #eee;
+  text-align: center;
+  padding: 50px;
+  font-size: 50px;
+}
+
+
+.search-layout{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.productCard{
+  width: 30%;
+}
+.productCard img{
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+}

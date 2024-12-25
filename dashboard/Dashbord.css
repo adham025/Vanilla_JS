@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  background-color: #f4f4f4;
+}
+
+.sidebar {
+  background-color: #007bff;
+  color: white;
+  width: 250px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: sticky;
+}
+
+.sidebar h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  display: block;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.sidebar a.active {
+  background-color: white;
+  color: #007bff;
+  font-weight: bold;
+  position: relative;
+}
+
+.sidebar a:hover {
+  background-color: white;
+  color: #007bff;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.form-container {
+  background: white;
+  color: #007bff;
+  width: 18%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  padding-right: 40px;
+  margin-bottom: 30px;
+  transition: all 0.7s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container i {
+  color: rgba(39, 26, 26, 0.823);
+}
+
+.form-container:hover i {
+  color: white;
+}
+
+.form-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #007bff;
+  color: white;
+}
+
+.list-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+
+.list-container div {
+  background-color: white;
+  border-radius: 8px;
+}
+
+.list-container > div {
+  margin: 10px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style: none;
+  padding: 0 30px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.postion {
+  position: absolute;
+  top: -10px;
+  left: -8%;
+  width: 100%;
+  margin-left: 8px;
+  background-color: transparent;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.border {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: -20px;
+  right: 45%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.imgg {
+  width: 20%;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  padding: 10px;
+  border-radius: 0 !important;
+}
+.des {
+  margin-top: 37px;
+}
