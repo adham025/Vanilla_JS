@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeadPhones | MaaS</title>
+    <link rel="stylesheet" href="/categories/headphones/headphones.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>
+      <a href="../cart/cart.html">Cart</a>
+    </h1>
+    <div class="parent">
+      <div class="filter-bar">
+        <h2>Filter</h2>
+
+        <div class="filter-group">
+          <label>Brand:</label>
+          <div>
+            <input
+              type="checkbox"
+              id="audio"
+              value="Audio"
+              class="brand-checkbox"
+            />
+            <label for="audio">Audio</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="bose"
+              value="Bose"
+              class="brand-checkbox"
+            />
+            <label for="bose">Bose</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="JBL"
+              value="JBL"
+              class="brand-checkbox"
+            />
+            <label for="JBL">JBL</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="sony"
+              value="Sony"
+              class="brand-checkbox"
+            />
+            <label for="sony">Sony</label>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Color:</label>
+          <div>
+            <input
+              type="checkbox"
+              id="black"
+              value="Black"
+              class="color-checkbox"
+            />
+            <label for="black">Black</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="white"
+              value="White"
+              class="color-checkbox"
+            />
+            <label for="white">White</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="blue"
+              value="Blue"
+              class="color-checkbox"
+            />
+            <label for="blue">Blue</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="silver"
+              value="Silver"
+              class="color-checkbox"
+            />
+            <label for="silver">Silver</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="gold"
+              value="Gold"
+              class="color-checkbox"
+            />
+            <label for="gold">Gold</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="priceRange">Price:</label>
+          <input
+            type="range"
+            id="priceRange"
+            min="1000"
+            max="100000"
+            step="500"
+            value="1000"
+          />
+          <span id="priceRangeValue">Price: 1000</span> EGP
+          <button id="applyPriceFilter">Apply Price Filter</button>
+          <select id="sort">
+            <option id="default" value="default" disabled selected>
+              Sort by price
+            </option>
+            <option id="highest" value="highest">Highest to lowest</option>
+            <option id="lowest" value="lowest">Lowest to highest</option>
+          </select>
+        </div>
+      </div>
+      <div class="products"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      type="module"
+      src="/categories/headphones/headphones.js"
+      defer
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Add Product</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/dashboard/admin-home/admin-home.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <a href="#">Categories</a>
+      <a href="#">Product</a>
+      <a href="#">Order</a>
+      <a href="#">Users</a>
+      <a href="#">Stock</a>
+    </aside>
+
+    <div class="main-container">
+      <div class="main">
+        <div class="form-container">
+          <div>
+            <span id="countprod"> </span>
+            <br />
+            <span>Products</span>
+          </div>
+          <div><i class="fa-solid fa-cart-shopping fa-2x"></i></div>
+        </div>
+        <div class="form-container">
+          <div>
+            <span id="usercou"></span>
+            <br />
+            <span>Users</span>
+          </div>
+          <div><i class="fa-solid fa-user fa-2x"></i></div>
+        </div>
+        <div class="form-container">
+          <div>
+            45
+            <br />
+            <span>Orders shipped</span>
+          </div>
+          <div><i class="fa-solid fa-circle-check fa-2x"></i></div>
+        </div>
+        <div class="form-container">
+          <div>
+            90
+            <br />
+            <span>products</span>
+          </div>
+          <div><i class="fa-solid fa-cart-shopping fa-2x"></i></div>
+        </div>
+      </div>
+
+      <div class="list-container">
+        <div style="position: relative">
+          <div class="border">
+            <img class="postion" src="./hot-fire-icon-2.png" alt="" />
+          </div>
+
+          <br />
+          <br />
+
+          <h2>Hot Product</h2>
+          <div id="list"></div>
+        </div>
+        <div style="position: relative">
+          <div class="border">
+            <img class="postion" src="./images.png" alt="" />
+          </div>
+          <br />
+          <br />
+          <h2>Most sold</h2>
+          <div id="list2"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/dashboard/admin-home/admin-home.js"></script>
+  </body>
+</html>
