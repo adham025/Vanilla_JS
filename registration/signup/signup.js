@@ -68,7 +68,6 @@ let repassword = document.getElementById("repassword");
 })();
 
 //  validation on firstName and lastName input
-
 // firstName.addEventListener("blur" , userNameValidate);
 // lastName.addEventListener("blur" , userNameValidate);
 firstName.addEventListener("keyup", firstNameValidate);

@@ -11,12 +11,6 @@
   --margin-bottom: 70px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -406,50 +400,6 @@ nav .nav-list li a:active {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.filter-bar {
-  background-color: #007bff;
-  color: white;
-  width: 22%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  position: sticky;
-}
-
-.filter-bar h2 {
-  margin: 0 0 20px;
-  font-size: 1.5rem;
-}
-
-.filter-bar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 25px;
-  margin-bottom: 10px;
-  display: block;
-  transition: all 0.3s;
-  position: relative;
-}
-
-.filter-bar a.active {
-  background-color: white;
-  color: #007bff;
-  font-weight: bold;
-  position: relative;
-}
-
-.filter-bar a:hover {
-  background-color: white;
-  color: #007bff;
-}
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -466,10 +416,7 @@ nav .nav-list li a:active {
   height: 200px;
   object-fit: contain;
 }
-.parent {
-  display: flex;
-  justify-content: space-between;
-}
+
 .product-price {
   margin-bottom: 10px;
 }
@@ -486,10 +433,10 @@ nav .nav-list li a:active {
   cursor: pointer;
   color: white;
 }
+
 a {
   text-decoration: none;
   color: #3498db;
-  /* background-color: blue; */
   display: inline-block;
   margin-left: 20px;
   margin-top: 10px;
@@ -497,4 +444,122 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* General styling for the parent container */
+.parent {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* Filter bar container */
+.filter-bar {
+  width: 300px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter group styling */
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.filter-group label {
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.filter-group div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Checkbox styling for color selection */
+.color-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+}
+
+.color-checkbox:checked {
+  transform: scale(1.2);
+  border-color: #555;
+}
+
+/* Styling for price range input */
+#priceRange {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#priceRangeValue {
+  font-weight: bold;
+}
+
+/* Button for applying filters */
+#applyPriceFilter {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#applyPriceFilter:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown for sorting */
+#sort {
+  margin-top: 15px;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+#sort option {
+  font-size: 14px;
+}
+
+/* Checkbox styling for brand selection */
+.brand-checkbox {
+  margin-right: 10px;
+}
+
+.brand-checkbox:checked + label {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Remove margin for the last checkbox */
+.filter-group div:last-child {
+  margin-bottom: 0;
 }
