@@ -9,7 +9,7 @@ import {
   set,
 } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
 
-import { firebaseConfig } from "../firebase/config.js";
+import { firebaseConfig } from "../../config.js";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

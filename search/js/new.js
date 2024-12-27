@@ -13,42 +13,33 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase();
 
-
 const productsRef = ref(db, "products/");
 get(productsRef)
   .then((snapshot) => {
     if (snapshot.exists()) {
       let products = snapshot.val();
-      // console.log(products);
 
       const searchDiv = document.getElementById("searchgg");
-      let searchIcon=document.getElementById("searchBtn")
+      let searchIcon = document.getElementById("searchBtn");
       const productData = document.querySelector("#searchLayout");
-console.log(searchIcon)
-      // Data filtering
       searchIcon.addEventListener("click", () => {
         const searchVal = searchDiv.value;
-console.log(searchVal);
-
-        // window.location.href = `../search/index.html?search=${searchVal}`;
-
-        // let url = window.location.search;
-        // let query = new URLSearchParams(url);
-        // let searchParams = query.get('search');
-        // console.log(searchParams);
         console.log(products);
-        
-        const matchedProducts = Object.entries(products).filter(([key, product]) => {
-          console.log(key);
-          console.log(product);
-          
-          return (
-            product.name.toLowerCase().includes(searchVal) ||
-            product.description.toLowerCase().includes(searchVal)
-          );
-        });
 
-        // Display data
+        const matchedProducts = Object.entries(products).filter(
+          ([key, product]) => {
+            console.log(key);
+            console.log(product);
+
+            return (
+              product.name.toLowerCase().includes(searchVal.toLowerCase()) ||
+              product.description
+                .toLowerCase()
+                .includes(searchVal.toLowerCase())
+            );
+          }
+        );
+
         productData.innerHTML = "";
         if (matchedProducts.length > 0) {
           let container = null;
@@ -66,7 +57,6 @@ console.log(searchVal);
           productData.innerHTML = "No products found";
         }
       });
-      
     }
   })
   .catch((error) => {

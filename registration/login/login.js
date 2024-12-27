@@ -2,10 +2,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 import {
   getAuth,
   signInWithEmailAndPassword,
-  updatePassword
+  updatePassword,
 } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
-import { firebaseConfig } from "../firebase/config.js";
+import { firebaseConfig } from "../../config.js";
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -38,18 +38,18 @@ let password = document.getElementById("password");
           const user = userCredential.user;
           window.localStorage.setItem("userId_iti", user.uid);
           sweetAlertSuccess();
+          console.log("done");
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          
-          if (errorCode == "auth/invalid-credential") {
-                sweetAlertFailed("Email or password is invalid");
-            } else {
-                sweetAlertFailed(errorCode);
-            }
-        });
 
+          if (errorCode == "auth/invalid-credential") {
+            sweetAlertFailed("Email or password is invalid");
+          } else {
+            sweetAlertFailed(errorCode);
+          }
+        });
     } else {
       console.log("input or more is empty");
     }
@@ -133,18 +133,3 @@ function sweetAlertFailed(errorMessage) {
   });
   return Toast;
 }
-
-
-
-
-// (function(){
-//   const user = auth.currentUser;
-//   const newPassword = getASecureRandomPassword();
-
-//   updatePassword(user, newPassword).then(() => {
-//     // Update successful.
-//   }).catch((error) => {
-//     // An error ocurred
-//   // ...
-// });
-// })()

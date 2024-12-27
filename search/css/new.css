@@ -1,32 +1,24 @@
 /* Start Css */
 
-
 .search-layout {
-<<<<<<< HEAD
   /* height: 300px; */
-=======
   height: 300px;
->>>>>>> 86e845175900de5e1e404423cf08bae3c666d8c5
   background-color: #eee;
   text-align: center;
   padding: 50px;
   font-size: 50px;
-<<<<<<< HEAD
 }
 
-
-.search-layout{
+.search-layout {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.productCard{
+.productCard {
   width: 30%;
 }
-.productCard img{
+.productCard img {
   width: 100%;
   height: 350px;
   object-fit: contain;
-=======
->>>>>>> 86e845175900de5e1e404423cf08bae3c666d8c5
 }

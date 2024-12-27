@@ -81,6 +81,8 @@ document.getElementById("sort").addEventListener("change", (e) => {
 function displayProducts(products) {
   const productsContainer = document.querySelector(".products");
   if (products.length === 0) {
+    console.log(products);
+
     productsContainer.innerHTML = "<p>No products match your filters.</p>";
     return;
   }
