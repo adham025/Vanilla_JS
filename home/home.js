@@ -71,3 +71,30 @@ function showNextSlide() {
 
 // Change slide every 5 seconds
 setInterval(showNextSlide, 5000);
+function startDecoratedCountdown(duration) {
+    let timer = duration;
+  
+    const hoursElem = document.getElementById('hours');
+    const minutesElem = document.getElementById('minutes');
+    const secondsElem = document.getElementById('seconds');
+  
+    setInterval(() => {
+      const hours = Math.floor(timer / 3600);
+      const minutes = Math.floor((timer % 3600) / 60);
+      const seconds = timer % 60;
+  
+      hoursElem.textContent = hours < 10 ? "0" + hours : hours;
+      minutesElem.textContent = minutes < 10 ? "0" + minutes : minutes;
+      secondsElem.textContent = seconds < 10 ? "0" + seconds : seconds;
+  
+      if (--timer < 0) {
+        timer = duration; // Reset if you want it to loop; remove this line to stop at 0
+      }
+    }, 1000);
+  }
+  
+  window.onload = () => {
+    const duration = 72 * 60 * 60; // 72 hours in seconds
+    startDecoratedCountdown(duration);
+  };
+  
