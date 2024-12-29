@@ -64,21 +64,3 @@ function getProduct() {
 getProduct();
 
 console.log(product.name);
-<<<<<<< HEAD
-
-// let productsRef = ref(db, "products/");
-// get(productsRef)
-//   .then((snapshot) => {
-//     if (snapshot.exists()) {
-//       let products = snapshot.val();
-//       console.log(products);
-
-//       const urlParams = new URLSearchParams(window.location.search);
-//       const selectedId = urlParams.get("id");
-//     }
-//       })
-//   .catch((error) => {
-//     console.error("Error fetching products:", error);
-//   });
-=======
->>>>>>> 86e845175900de5e1e404423cf08bae3c666d8c5
